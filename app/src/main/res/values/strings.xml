@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AWS Docs</string>
     <string name="aws_doc_url">https://aws.amazon.com/documentation/</string>
+    <string name="main_activity_extra">service_detail</string>
 </resources>
