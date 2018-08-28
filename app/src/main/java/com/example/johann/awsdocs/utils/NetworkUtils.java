@@ -11,6 +11,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.johann.awsdocs.R;
+import com.example.johann.awsdocs.data.AWSDocumentation;
 import com.example.johann.awsdocs.data.AWSService;
 import com.example.johann.awsdocs.ui.MainActivity;
 
@@ -47,7 +48,6 @@ public class NetworkUtils {
         } catch (IOException e) {
             Timber.e(e.getMessage());
         }
-
         return doc;
     }
 
@@ -120,12 +120,11 @@ public class NetworkUtils {
         return awsServiceList;
     }
 
-    public static ArrayList<String> makeAWS2HeaderRequestOffline(Context context) {
+    public static ArrayList<AWSDocumentation> makeListRequestOffline(Context context,AWSService awsService) {
 
         InputStream file;
         Document document = null;
-        ArrayList<String> headers = new ArrayList<>();
-
+        ArrayList<AWSDocumentation> awsDocumentationList = new ArrayList<>();
 
         try {
             file = context.getAssets().open("aws2.html");
@@ -134,17 +133,15 @@ public class NetworkUtils {
         catch (IOException e){
             e.printStackTrace();
         }
-
         Elements titleTag = document.select("h3");
-        if(titleTag.isEmpty()) {
-
-        }
-        else {
-            for (Element e : titleTag) {
-                String header = e.text();
-                headers.add(header);
+        String header;
+        for (Element e : titleTag) {
+            header = e.text();
+            if(header.isEmpty()) {
+                header = awsService.returnName();
             }
         }
-        return headers;
+        return awsDocumentationList;
+
     }
 }

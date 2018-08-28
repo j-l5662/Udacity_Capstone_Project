@@ -6,50 +6,25 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Hello" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef788dfc-783b-459e-ab9f-497cbf283815" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_1_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_1_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jsoup_jsoup_1_11_3_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/DetailRecyclerViewAdapter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/MainRecyclerViewAdapter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/log/NoLoggingTree.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationViewModel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/detail_services_card_view.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSService.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/recyclerviews/MainRecyclerView.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_recycler_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_recycler_view.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,62 +50,12 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="484">
+              <caret line="81" column="56" lean-forward="false" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2964#2965#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AWSDetailActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding>
-                <element signature="e#1351#1390#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AWSServiceListViewModel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1141#1142#0" expanded="true" />
-                <element signature="e#1176#1177#0" expanded="true" />
-                <element signature="e#1473#1541#0" expanded="true" />
-                <element signature="e#1649#2710#0" expanded="true" />
-                <element signature="e#2709#2710#0" expanded="true" />
-                <element signature="e#2712#2952#0" expanded="true" />
-                <element signature="e#2951#2952#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AWSDocumentationViewModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationViewModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -138,22 +63,29 @@
       <file leaf-file-name="NetworkUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="77" column="8" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+            <state relative-caret-position="869">
+              <caret line="145" column="5" lean-forward="false" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainRecyclerViewAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/MainRecyclerViewAdapter.java">
+      <file leaf-file-name="AWSDetailActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
-              <folding>
-                <element signature="e#2193#2194#0" expanded="true" />
-                <element signature="e#2236#2237#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="368">
+              <caret line="97" column="52" lean-forward="false" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParsingUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/ParsingUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,13 +93,22 @@
       <file leaf-file-name="AWSDocumentation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AWSServiceListViewModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="86" column="31" lean-forward="false" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
               <folding>
-                <element signature="e#940#941#0" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1014#1015#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1232#1233#0" expanded="true" />
+                <element signature="e#1267#1268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,12 +117,10 @@
       <file leaf-file-name="AWSDocumentationListViewModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1153">
-              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="42" />
+            <state relative-caret-position="577">
+              <caret line="90" column="102" lean-forward="false" selection-start-line="90" selection-start-column="102" selection-end-line="90" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1760#3109#0" expanded="true" />
-                <element signature="e#3108#3109#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2237,7 +2176,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AwsDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentationPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSListViewModel.java" />
@@ -2247,12 +2185,15 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_title_recycler_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/MainRecyclerViewAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/Parsing.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/ParsingUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java" />
       </list>
     </option>
   </component>
@@ -2326,18 +2267,6 @@
               <item name="Udacity_Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Udacity_Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Udacity_Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -2582,6 +2511,7 @@
           <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2964#2965#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2610,14 +2540,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
           <folding>
-            <element signature="e#661#662#0" expanded="false" />
-            <element signature="e#703#704#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-            <element signature="e#787#788#0" expanded="false" />
-            <element signature="e#817#818#0" expanded="false" />
-            <element signature="e#843#844#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#901#902#0" expanded="false" />
+            <element signature="e#623#624#0" expanded="false" />
+            <element signature="e#665#666#0" expanded="false" />
+            <element signature="e#709#710#0" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#779#780#0" expanded="false" />
+            <element signature="e#805#806#0" expanded="false" />
+            <element signature="e#836#837#0" expanded="false" />
+            <element signature="e#863#864#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2628,13 +2558,8 @@
           <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1473#1541#0" expanded="true" />
-            <element signature="e#1649#2710#0" expanded="true" />
-            <element signature="e#2709#2710#0" expanded="true" />
-            <element signature="e#2712#2952#0" expanded="true" />
-            <element signature="e#2951#2952#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2645,8 +2570,8 @@
           <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1250#1289#0" expanded="false" />
-            <element signature="e#1351#1390#0" expanded="true" />
+            <element signature="e#1307#1346#0" expanded="false" />
+            <element signature="e#1408#1447#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2816,28 +2741,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1153">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1760#3109#0" expanded="true" />
-            <element signature="e#3108#3109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2846,45 +2754,20 @@
         <state relative-caret-position="254">
           <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
           <folding>
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="e#1351#1390#0" expanded="true" />
+            <element signature="e#2193#2194#0" expanded="false" />
+            <element signature="e#2236#2237#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="484">
+          <caret line="81" column="56" lean-forward="false" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2964#2965#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="77" column="8" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2896,20 +2779,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="869">
+          <caret line="145" column="5" lean-forward="false" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="428">
+          <caret line="86" column="31" lean-forward="false" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1473#1541#0" expanded="true" />
-            <element signature="e#1649#2710#0" expanded="true" />
-            <element signature="e#2709#2710#0" expanded="true" />
-            <element signature="e#2712#2952#0" expanded="true" />
-            <element signature="e#2951#2952#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="90" column="102" lean-forward="false" selection-start-line="90" selection-start-column="102" selection-end-line="90" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/ParsingUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="97" column="52" lean-forward="false" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

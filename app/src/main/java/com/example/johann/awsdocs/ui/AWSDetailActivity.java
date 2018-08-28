@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.johann.awsdocs.R;
+import com.example.johann.awsdocs.data.AWSDocumentation;
 import com.example.johann.awsdocs.data.AWSService;
 import com.example.johann.awsdocs.utils.NetworkUtils;
 
@@ -46,14 +47,13 @@ public class AWSDetailActivity extends AppCompatActivity{
         ButterKnife.bind(this);
         if(getIntent().hasExtra(getString(R.string.main_activity_extra))) {
             mAwsService = getIntent().getParcelableExtra(getString(R.string.main_activity_extra));
-            Timber.i(mAwsService.returnName());
         }
         setTitle(mAwsService.returnName());
 
-        mHeaders = NetworkUtils.makeAWS2HeaderRequestOffline(this);
+//        mHeaders = NetworkUtils.makeAWS2HeaderRequestOffline(this);
         makeRequest(this);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.aws_activity_detail_list_view,R.id.text_view,mHeaders);
-        mListView.setAdapter(adapter);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.aws_activity_detail_list_view,R.id.text_view,mHeaders);
+//        mListView.setAdapter(adapter);
 
 
     }
@@ -71,10 +71,37 @@ public class AWSDetailActivity extends AppCompatActivity{
         catch (IOException e){
             e.printStackTrace();
         }
+        ArrayList<AWSDocumentation> awsDocumentations = new ArrayList<>();
+        Elements titleSections = document.getElementsByClass("title-wrapper section");
+        Elements tableSections = document.getElementsByClass("table-wrapper section");
+        for ( int i = 0; i < titleSections.size(); i++) {
+            Element header = titleSections.get(i).select("h3").get(0);
+            String header_title = header.text();
 
-        Element table = document.select("table").first();
-        String title = table.text();
-        Timber.i(title);
-        return title;
+            Element tableSection = tableSections.get(i);
+            Elements tables = tableSection.select("table");
+            for (Element table : tables) {
+                Elements rows = table.select("tr");
+
+                for (int j = 0; j < rows.size(); j++) {
+                    Element row = rows.get(j);
+                    Elements column = row.select("td");
+
+                    Elements links = column.select("a");
+
+                    for (Element link : links) {
+                        String linkContent = link.attr("abs:href");
+                        String linkContentText = link.text();
+                        if(linkContentText.equals("HTML") || linkContentText.equals("PDF") || linkContentText.equals("Kindle")) {}
+                        else{
+                            awsDocumentations.add(new AWSDocumentation(header_title,linkContentText,linkContent));
+                            //TODO add to viewmodel 
+                        }
+
+                    }
+                }
+            }
+        }
+        return "";
     }
 }

@@ -1,10 +1,13 @@
 package com.example.johann.awsdocs.ui;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
 
     private ViewModel viewModel;
 
-    private ArrayList<AWSService> mAwsServiceList = new ArrayList<>();
+    private LiveData<ArrayList<AWSService>> mAwsServiceList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +65,8 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
     public void onClick(int position) {
 
         Context context = MainActivity.this;
-        AWSService awsService = mAwsServiceList.get(position);
+
+        AWSService awsService = mAwsServiceList.getValue().get(position);
         Class destinationActivity = AWSDetailActivity.class;
         Intent intent = new Intent(context,destinationActivity);
         intent.putExtra(getString(R.string.main_activity_extra),awsService);
@@ -73,7 +77,12 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
 
         AWSServiceListViewModel listViewModel = ViewModelProviders.of(this).get(AWSServiceListViewModel.class);
         mAwsServiceList = listViewModel.getAWSServiceList();
-        mAdapter = new MainRecyclerViewAdapter(mAwsServiceList,MainActivity.this);
-        mRecyclerView.setAdapter(mAdapter);
+        mAwsServiceList.observe(this, new Observer<ArrayList<AWSService>>() {
+            @Override
+            public void onChanged(@Nullable ArrayList<AWSService> awsServices) {
+                mAdapter = new MainRecyclerViewAdapter(awsServices,MainActivity.this);
+                mRecyclerView.setAdapter(mAdapter);
+            }
+        });
     }
 }

@@ -11,12 +11,11 @@ public class AWSDocumentation {
     private boolean columnHeader = false;
 
     public AWSDocumentation(String documentationHeader,String documentationName,
-                            String url,String text) {
+                            String url) {
 
         this.documentationHeader = documentationHeader;
         this.documentationName = documentationName;
         this.url = url;
-        this.text = text;
     }
 
     public String getDocumentationHeader() {

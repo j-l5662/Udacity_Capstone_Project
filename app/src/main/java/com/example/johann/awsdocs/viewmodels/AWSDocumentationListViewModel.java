@@ -2,6 +2,7 @@ package com.example.johann.awsdocs.viewmodels;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.renderscript.ScriptGroup;
 
@@ -30,7 +31,7 @@ import timber.log.Timber;
 
 public class AWSDocumentationListViewModel extends AndroidViewModel {
 
-    private ArrayList<AWSDocumentation> mAWSDocumentations;
+    private MutableLiveData<ArrayList<AWSDocumentation>> mAWSDocumentations;
     private AWSService mAWSservice;
     private Application mApplication;
 
@@ -86,28 +87,8 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
             queue.add(stringRequest);
         }
         else {
-            InputStream file;
-            Document document = null;
             Timber.i("Offline");
-            try {
-                file = mApplication.getApplicationContext().getAssets().open("aws2.html");
-                document = Jsoup.parse(file,"UTF-8","Test");
-            }
-            catch (IOException e){
-                e.printStackTrace();
-            }
-
-            Elements titleTag = document.select("h3");
-            if(titleTag.isEmpty()) {
-
-            }
-            else {
-                for (Element e : titleTag) {
-                    String header = e.text();
-                    //TODO Make AWS Documentation
-//                    headers.add(header);
-                }
-            }
+            mAWSDocumentations.setValue(NetworkUtils.makeListRequestOffline(androidContext,mAWSservice));
         }
     }
 }

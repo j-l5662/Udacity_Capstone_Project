@@ -2,6 +2,8 @@ package com.example.johann.awsdocs.viewmodels;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 
 import com.android.volley.Request;
@@ -25,25 +27,25 @@ import timber.log.Timber;
 
 public class AWSServiceListViewModel extends AndroidViewModel {
 
-    private ArrayList<AWSService> mServiceList;
+    private MutableLiveData<ArrayList<AWSService>> mServiceList = new MutableLiveData<>();
     private Application mApplication;
 
     public AWSServiceListViewModel(Application application) {
 
         super(application);
         mApplication = application;
-        if (mServiceList == null) {
-            loadServiceList();
-        }
+
+        loadServiceList();
     }
 
-    public ArrayList<AWSService> getAWSServiceList() {
+    public LiveData<ArrayList<AWSService>> getAWSServiceList() {
         return mServiceList;
     }
 
     private void loadServiceList() {
 
         Context androidContext = mApplication.getApplicationContext();
+        final ArrayList<AWSService> awsServiceArrayList = new ArrayList<>();
         if(NetworkUtils.isAppOnline(androidContext)) {
             Timber.i("Online");
             RequestQueue queue = Volley.newRequestQueue(androidContext);
@@ -53,6 +55,7 @@ public class AWSServiceListViewModel extends AndroidViewModel {
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
+                            Timber.i("Hello");
 
                             Document document = Jsoup.parse(response);
                             Elements link = document.select("div[id^=aws-nav-flyout-3-doc-]");
@@ -62,26 +65,28 @@ public class AWSServiceListViewModel extends AndroidViewModel {
                                 Timber.i(title);
                                 AWSService columnHeader = new AWSService(title,null);
                                 columnHeader.setColumnHeader();
-                                mServiceList.add(columnHeader);
+                                awsServiceArrayList.add(columnHeader);
                                 Elements text = ele.getElementsByClass("aws-link");
                                 for (Element t : text){
-                                    mServiceList.add(new AWSService(t.text(),t.select("a").attr("abs:href")));
+                                    awsServiceArrayList.add(new AWSService(t.text(),t.select("a").attr("abs:href")));
                                 }
                             }
+
+                            mServiceList.postValue(awsServiceArrayList);
                         }
                     }, new Response.ErrorListener() {
 
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    //TODO Add Timber
                     Timber.i(error.toString());
                 }
             });
             queue.add(stringRequest);
         }
         else {
+            //TODO Room Request
             Timber.i("Offline");
-            mServiceList = NetworkUtils.makeAWSMainRequestOffline(androidContext);
+            mServiceList.setValue(NetworkUtils.makeAWSMainRequestOffline(androidContext));
         }
     }
 }
