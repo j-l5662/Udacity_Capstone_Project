@@ -124,7 +124,7 @@ public class NetworkUtils {
 
         InputStream file;
         Document document = null;
-        ArrayList<AWSDocumentation> awsDocumentationList = new ArrayList<>();
+        ArrayList<AWSDocumentation> awsDocumentations = new ArrayList<>();
 
         try {
             file = context.getAssets().open("aws2.html");
@@ -133,15 +133,38 @@ public class NetworkUtils {
         catch (IOException e){
             e.printStackTrace();
         }
-        Elements titleTag = document.select("h3");
-        String header;
-        for (Element e : titleTag) {
-            header = e.text();
-            if(header.isEmpty()) {
-                header = awsService.returnName();
+
+        Elements titleSections = document.getElementsByClass("title-wrapper section");
+        Elements tableSections = document.getElementsByClass("table-wrapper section");
+        for ( int i = 0; i < titleSections.size(); i++) {
+            Element header = titleSections.get(i).select("h3").get(0);
+
+            String header_title = (header.text().isEmpty()) ? awsService.returnName() : header.text();
+
+
+            Element tableSection = tableSections.get(i);
+            Elements tables = tableSection.select("table");
+            for (Element table : tables) {
+                Elements rows = table.select("tr");
+
+                for (int j = 0; j < rows.size(); j++) {
+                    Element row = rows.get(j);
+                    Elements column = row.select("td");
+
+                    Elements links = column.select("a");
+
+                    for (Element link : links) {
+                        String linkContent = link.attr("abs:href");
+                        String linkContentText = link.text();
+                        if(linkContentText.equals("HTML") || linkContentText.equals("PDF") || linkContentText.equals("Kindle") || linkContentText.isEmpty()) {}
+                        else{
+                            awsDocumentations.add(new AWSDocumentation(header_title,linkContentText,linkContent));
+                        }
+
+                    }
+                }
             }
         }
-        return awsDocumentationList;
-
+        return awsDocumentations;
     }
 }

@@ -55,7 +55,6 @@ public class AWSServiceListViewModel extends AndroidViewModel {
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            Timber.i("Hello");
 
                             Document document = Jsoup.parse(response);
                             Elements link = document.select("div[id^=aws-nav-flyout-3-doc-]");

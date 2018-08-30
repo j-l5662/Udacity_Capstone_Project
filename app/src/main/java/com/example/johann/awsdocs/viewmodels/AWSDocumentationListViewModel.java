@@ -2,6 +2,7 @@ package com.example.johann.awsdocs.viewmodels;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.renderscript.ScriptGroup;
@@ -31,16 +32,21 @@ import timber.log.Timber;
 
 public class AWSDocumentationListViewModel extends AndroidViewModel {
 
-    private MutableLiveData<ArrayList<AWSDocumentation>> mAWSDocumentations;
-    private AWSService mAWSservice;
+    private MutableLiveData<ArrayList<AWSDocumentation>> mAWSDocumentations = new MutableLiveData<>();
+    private AWSService mAWSService;
     private Application mApplication;
 
-    public AWSDocumentationListViewModel(Application mApplication, AWSService mAWSservice) {
+    public AWSDocumentationListViewModel(Application mApplication, AWSService awsService) {
         super(mApplication);
         this.mApplication = mApplication;
-        this.mAWSservice = mAWSservice;
+        this.mAWSService = awsService;
+
+        loadDocumentationList();
     }
 
+    public LiveData<ArrayList<AWSDocumentation>> returnAWSDocumentationList() {
+        return mAWSDocumentations;
+    }
     private void loadDocumentationList() {
 
         Context androidContext = mApplication.getApplicationContext();
@@ -48,33 +54,49 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
         if(NetworkUtils.isAppOnline(androidContext)) {
             Timber.i("Online");
             RequestQueue queue = Volley.newRequestQueue(androidContext);
-            String url = mAWSservice.returnURL().toString();
+            String url = mAWSService.returnURL().toString();
 
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-
+                            ArrayList<AWSDocumentation> awsDocumentations = new ArrayList<>();
                             Document document = Jsoup.parse(response);
-                            Elements titleTag = document.select("h3");
-                            String header;
-                            for (Element e : titleTag) {
-                                header = e.text();
-                                if(header.isEmpty()) {
-                                    header = mAWSservice.returnName();
+                            Elements titleSections = document.getElementsByClass("title-wrapper section");
+                            Elements tableSections = document.getElementsByClass("table-wrapper section");
+                            for (int i = 0; i < titleSections.size(); i++) {
+                                Element header = titleSections.get(i).select("h3").get(0);
+
+                                String header_title = (header.text().isEmpty()) ? mAWSService.returnName() : header.text();
+
+                                AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,"");
+                                awsDocumentation.setasColumnHeader();
+                                awsDocumentations.add(awsDocumentation);
+
+
+                                Element tableSection = tableSections.get(i);
+                                Elements tables = tableSection.select("table");
+                                for (Element table : tables) {
+                                    Elements rows = table.select("tr");
+
+                                    for (int j = 0; j < rows.size(); j++) {
+                                        Element row = rows.get(j);
+                                        Elements column = row.select("td");
+
+                                        Elements links = column.select("a");
+
+                                        for (Element link : links) {
+                                            String linkContent = link.attr("abs:href");
+                                            String linkContentText = link.text();
+                                            if (linkContentText.equals("HTML") || linkContentText.equals("PDF") || linkContentText.equals("Kindle") || linkContentText.isEmpty()) {
+                                            } else {
+                                                awsDocumentations.add(new AWSDocumentation(linkContentText, linkContent));
+                                            }
+                                        }
+                                    }
                                 }
                             }
-
-//                            for(Element ele : link) {
-//                                String title = ele.select("h6").first().text();
-//                                AWSService columnHeader = new AWSService(title,null);
-//                                columnHeader.setColumnHeader();
-//                                mServiceList.add(columnHeader);
-//                                Elements text = ele.getElementsByClass("aws-link");
-//                                for (Element t : text){
-//                                    mServiceList.add(new AWSService(t.text(),t.select("a").attr("abs:href")));
-//                                }
-//                            }
+                            mAWSDocumentations.setValue(awsDocumentations);
                         }
                     }, new Response.ErrorListener() {
 
@@ -88,7 +110,7 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
         }
         else {
             Timber.i("Offline");
-            mAWSDocumentations.setValue(NetworkUtils.makeListRequestOffline(androidContext,mAWSservice));
+            mAWSDocumentations.setValue(NetworkUtils.makeListRequestOffline(androidContext,mAWSService));
         }
     }
 }
