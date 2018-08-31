@@ -26,7 +26,15 @@
                 android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.AWSDetailActivity" />
+                android:value=".ui.MainActivity" />
+        </activity>
+        <activity
+                android:name=".ui.AWSDocumentationActivity"
+                android:parentActivityName=".ui.AWSDetailActivity"
+                android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.AWSDetailActivity"/>
         </activity>
     </application>
 

@@ -3,13 +3,17 @@ package com.example.johann.awsdocs.ui;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.johann.awsdocs.R;
+import com.example.johann.awsdocs.adapters.DetailRecyclerViewAdapter;
 import com.example.johann.awsdocs.data.AWSDocumentation;
 import com.example.johann.awsdocs.data.AWSService;
 import com.example.johann.awsdocs.factory.AWSDocumentationViewModelFactory;
@@ -19,17 +23,15 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import timber.log.Timber;
 
-public class AWSDetailActivity extends AppCompatActivity{
+public class AWSDetailActivity extends AppCompatActivity implements DetailRecyclerViewAdapter.ServiceClickListener{
 
     private AWSService mAWSService;
 
-//    @BindView(R.id.aws_detail_url_text_view)
-//    TextView mTextView;
+    private RecyclerView.LayoutManager mLayoutManager;
 
-    @BindView(R.id.aws_service_list)
-    ListView mListView;
+    @BindView(R.id.aws_service_list_recycler_view)
+    RecyclerView mRecyclerView;
 
     private LiveData<ArrayList<AWSDocumentation>> mAWSDocumentations;
 
@@ -45,6 +47,9 @@ public class AWSDetailActivity extends AppCompatActivity{
         }
         setTitle(mAWSService.returnName());
 
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
         setupViewModel();
     }
 
@@ -54,13 +59,24 @@ public class AWSDetailActivity extends AppCompatActivity{
         mAWSDocumentations.observe(this, new Observer<ArrayList<AWSDocumentation>>() {
             @Override
             public void onChanged(@Nullable ArrayList<AWSDocumentation> awsDocumentations) {
-                ArrayList<String> documentations = new ArrayList<>();
-                for(int i = 0; i < mAWSDocumentations.getValue().size();i++){
-                    documentations.add(awsDocumentations.get(i).getDocumentationName());
-                }
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(AWSDetailActivity.this, R.layout.aws_activity_detail_list_view,R.id.text_view,documentations);
-                mListView.setAdapter(adapter);
+
+                DetailRecyclerViewAdapter adapter = new DetailRecyclerViewAdapter(awsDocumentations,AWSDetailActivity.this);
+                mRecyclerView.setAdapter(adapter);
             }
         });
+    }
+
+    @Override
+    public void onClick(int position) {
+
+        AWSDocumentation awsDocumentation = mAWSDocumentations.getValue().get(position);
+
+
+        Class documentationActivity = AWSDocumentationActivity.class;
+        Intent intent = new Intent(this,documentationActivity);
+        intent.putExtra(getString(R.string.detail_activity_extra),awsDocumentation);
+
+        startActivity(intent);
+
     }
 }

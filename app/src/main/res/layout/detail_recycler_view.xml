@@ -2,5 +2,6 @@
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/ListDetail"
-    android:id="@+id/main_recycler_view_adapter">
+    android:id="@+id/detail_recycler_view_adapter">
+
 </TextView>

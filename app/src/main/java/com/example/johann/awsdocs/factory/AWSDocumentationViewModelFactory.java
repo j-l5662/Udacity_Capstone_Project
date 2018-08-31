@@ -8,7 +8,7 @@ import android.support.annotation.NonNull;
 import com.example.johann.awsdocs.data.AWSService;
 import com.example.johann.awsdocs.viewmodels.AWSDocumentationListViewModel;
 
-public class AWSDocumentationViewModelFactory extends ViewModelProvider.NewInstanceFactory{
+public class AWSDocumentationViewModelFactory extends ViewModelProvider.NewInstanceFactory {
 
     private Application mApplication;
     private AWSService mAWSService;

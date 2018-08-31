@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 
 public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    ArrayList<AWSService> mServicesList;
+    private ArrayList<AWSService> mServicesList;
     final private ServiceClickListener mClickListener;
 
     public interface ServiceClickListener {

@@ -136,11 +136,15 @@ public class NetworkUtils {
 
         Elements titleSections = document.getElementsByClass("title-wrapper section");
         Elements tableSections = document.getElementsByClass("table-wrapper section");
+
         for ( int i = 0; i < titleSections.size(); i++) {
             Element header = titleSections.get(i).select("h3").get(0);
 
             String header_title = (header.text().isEmpty()) ? awsService.returnName() : header.text();
 
+            AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,"");
+            awsDocumentation.setasColumnHeader();
+            awsDocumentations.add(awsDocumentation);
 
             Element tableSection = tableSections.get(i);
             Elements tables = tableSection.select("table");
@@ -158,7 +162,7 @@ public class NetworkUtils {
                         String linkContentText = link.text();
                         if(linkContentText.equals("HTML") || linkContentText.equals("PDF") || linkContentText.equals("Kindle") || linkContentText.isEmpty()) {}
                         else{
-                            awsDocumentations.add(new AWSDocumentation(header_title,linkContentText,linkContent));
+                            awsDocumentations.add(new AWSDocumentation(linkContentText,linkContent));
                         }
 
                     }
@@ -166,5 +170,25 @@ public class NetworkUtils {
             }
         }
         return awsDocumentations;
+    }
+
+    public static String makeDocumentationRequestOffline(Context context) {
+
+        InputStream file;
+        Document document = null;
+
+        try {
+            file = context.getAssets().open("aws3.html");
+            document = Jsoup.parse(file,"UTF-8","Test");
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+        Element title = document.getElementById("concepts");
+
+
+
+        return title.text();
     }
 }
