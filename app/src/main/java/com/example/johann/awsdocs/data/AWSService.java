@@ -14,7 +14,6 @@ public class AWSService implements Parcelable{
     private String serviceName;
     private ArrayList<String> pagesURL;
     private String pageBody;
-    private WebView webView;
 
     private ArrayList<AWSDocumentation> serviceDocumentation;
     private boolean columnHeader = false;
@@ -35,7 +34,7 @@ public class AWSService implements Parcelable{
     public void writeToParcel(Parcel parcel, int i) {
 
         parcel.writeString(serviceName);
-        parcel.writeString(serviceName);
+        parcel.writeString(serviceURL);
     }
 
     @Override
@@ -54,8 +53,8 @@ public class AWSService implements Parcelable{
         }
     };
 
-    public Uri returnURL() {
-        return Uri.parse(serviceURL);
+    public String returnURL() {
+        return serviceURL;
     }
 
     public String returnName() {

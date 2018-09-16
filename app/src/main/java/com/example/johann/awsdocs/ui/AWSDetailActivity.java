@@ -9,14 +9,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.example.johann.awsdocs.R;
 import com.example.johann.awsdocs.adapters.DetailRecyclerViewAdapter;
 import com.example.johann.awsdocs.data.AWSDocumentation;
 import com.example.johann.awsdocs.data.AWSService;
-import com.example.johann.awsdocs.factory.AWSDocumentationViewModelFactory;
+import com.example.johann.awsdocs.factory.AWSDocumentationListViewModelFactory;
 import com.example.johann.awsdocs.viewmodels.AWSDocumentationListViewModel;
 
 import java.util.ArrayList;
@@ -54,7 +52,8 @@ public class AWSDetailActivity extends AppCompatActivity implements DetailRecycl
     }
 
     private void setupViewModel() {
-        AWSDocumentationListViewModel listViewModel = ViewModelProviders.of(this, new AWSDocumentationViewModelFactory(this.getApplication(), mAWSService)).get(AWSDocumentationListViewModel.class);
+        AWSDocumentationListViewModel listViewModel = ViewModelProviders.of(this, new AWSDocumentationListViewModelFactory(this.getApplication(),
+                mAWSService)).get(AWSDocumentationListViewModel.class);
         mAWSDocumentations = listViewModel.returnAWSDocumentationList();
         mAWSDocumentations.observe(this, new Observer<ArrayList<AWSDocumentation>>() {
             @Override

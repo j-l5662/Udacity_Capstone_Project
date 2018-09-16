@@ -30,6 +30,8 @@ public class AWSServiceListViewModel extends AndroidViewModel {
     private MutableLiveData<ArrayList<AWSService>> mServiceList = new MutableLiveData<>();
     private Application mApplication;
 
+    private final String awsURL = "https://aws.amazon.com/";
+
     public AWSServiceListViewModel(Application application) {
 
         super(application);
@@ -51,23 +53,33 @@ public class AWSServiceListViewModel extends AndroidViewModel {
             RequestQueue queue = Volley.newRequestQueue(androidContext);
             String url = mApplication.getApplicationContext().getString(R.string.aws_doc_url);
 
+            Timber.i(url);
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
 
                             Document document = Jsoup.parse(response);
-                            Elements link = document.select("div[id^=aws-nav-flyout-3-doc-]");
 
-                            for(Element ele : link) {
-                                String title = ele.select("h6").first().text();
-                                Timber.i(title);
-                                AWSService columnHeader = new AWSService(title,null);
+                            Elements linkColumn = document.getElementsByClass("lb-col lb-tiny-24 lb-mid-21");
+
+                            Elements columnTitles = document.getElementsByClass("lb-tiny-v-margin lb-rtxt");
+                            for(int i = 0; i < columnTitles.size();i++) {
+
+                               String columnTitle = columnTitles.get(i).text();
+
+                                AWSService columnHeader = new AWSService(columnTitle,null);
                                 columnHeader.setColumnHeader();
                                 awsServiceArrayList.add(columnHeader);
-                                Elements text = ele.getElementsByClass("aws-link");
-                                for (Element t : text){
-                                    awsServiceArrayList.add(new AWSService(t.text(),t.select("a").attr("abs:href")));
+
+                                Elements links = linkColumn.get(i).getElementsByClass("lb-txt-none lb-txt");
+                                for (Element t : links){
+
+                                    String documnetationName = t.html();
+                                    String documentationURL = t.attr("href");
+
+                                    documentationURL = awsURL + documentationURL;
+                                    awsServiceArrayList.add(new AWSService(documnetationName,documentationURL));
                                 }
                             }
 

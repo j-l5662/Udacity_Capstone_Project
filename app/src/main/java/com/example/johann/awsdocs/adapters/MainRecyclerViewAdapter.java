@@ -84,17 +84,6 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         }
     }
 
-    public void updateData(ArrayList<AWSService> servicesList) {
-
-        if(servicesList != null || servicesList.size() > 0) {
-            this.mServicesList.clear();
-            this.mServicesList.addAll(servicesList);
-        }
-        else {
-            this.mServicesList = servicesList;
-        }
-    }
-
     public class MainViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         @BindView(R.id.main_recycler_view_adapter)

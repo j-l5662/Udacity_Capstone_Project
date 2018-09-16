@@ -15,6 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import com.example.johann.awsdocs.BuildConfig;
 import com.example.johann.awsdocs.R;
 import com.example.johann.awsdocs.adapters.MainRecyclerViewAdapter;
+import com.example.johann.awsdocs.data.AWSDocumentation;
 import com.example.johann.awsdocs.data.AWSService;
 import com.example.johann.awsdocs.log.NoLoggingTree;
 import com.example.johann.awsdocs.viewmodels.AWSServiceListViewModel;
@@ -32,10 +33,7 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
     public RecyclerView mRecyclerView;
 
     private RecyclerView.LayoutManager mLayoutManager;
-    private String mMainDocResponse;
     private MainRecyclerViewAdapter mAdapter;
-
-    private ViewModel viewModel;
 
     private LiveData<ArrayList<AWSService>> mAwsServiceList;
 
@@ -59,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
 
         setupViewModel();
     }
-    //TODO Create Volley request and set up Recycler-View
 
     @Override
     public void onClick(int position) {
@@ -67,9 +64,21 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
         Context context = MainActivity.this;
 
         AWSService awsService = mAwsServiceList.getValue().get(position);
-        Class destinationActivity = AWSDetailActivity.class;
-        Intent intent = new Intent(context,destinationActivity);
-        intent.putExtra(getString(R.string.main_activity_extra),awsService);
+        Class destinationActivity;
+        Intent intent;
+        if(awsService.returnURL().contains("UserGuide")) {
+
+            destinationActivity = AWSDocumentationActivity.class;
+            intent = new Intent(context,destinationActivity);
+            intent.putExtra(getString(R.string.detail_activity_extra),new AWSDocumentation(awsService.returnName(),awsService.returnURL()));
+        }
+        else{
+
+            destinationActivity = AWSDetailActivity.class;
+            intent = new Intent(context,destinationActivity);
+            intent.putExtra(getString(R.string.main_activity_extra),awsService);
+
+        }
         startActivity(intent);
     }
 

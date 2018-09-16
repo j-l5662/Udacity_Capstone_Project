@@ -5,8 +5,6 @@ import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -51,7 +49,7 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
         if(NetworkUtils.isAppOnline(androidContext)) {
             Timber.i("Online");
             RequestQueue queue = Volley.newRequestQueue(androidContext);
-            String url = mAWSService.returnURL().toString();
+            String url = mAWSService.returnURL();
 
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
@@ -61,10 +59,20 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
                             Document document = Jsoup.parse(response);
                             Elements titleSections = document.getElementsByClass("title-wrapper section");
                             Elements tableSections = document.getElementsByClass("table-wrapper section");
-                            for (int i = 0; i < titleSections.size(); i++) {
-                                Element header = titleSections.get(i).select("h3").get(0);
 
-                                String header_title = (header.text().isEmpty()) ? mAWSService.returnName() : header.text();
+                            int tableIterator = (titleSections.size() == 0 ) ? 1 : titleSections.size();
+
+                            for (int i = 0; i < tableIterator; i++) {
+                                Element header;
+                                String header_title;
+                                if(titleSections.size() != 0) {
+                                    header = titleSections.get(i).select("h3").get(0);
+                                    header_title = header.text();
+                                }
+
+                                else {
+                                    header_title = mAWSService.returnName();
+                                }
 
                                 AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,"");
                                 awsDocumentation.setasColumnHeader();

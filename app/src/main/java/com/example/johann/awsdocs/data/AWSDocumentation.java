@@ -5,7 +5,6 @@ import android.os.Parcelable;
 
 public class AWSDocumentation implements Parcelable{
 
-    //TODO If the url does not have userguide /or guide in it, open up a webpage
     private String documentationName;
     private String url;
     private String text;

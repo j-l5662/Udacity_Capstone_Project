@@ -27,6 +27,8 @@ import java.lang.ref.WeakReference;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import timber.log.Timber;
 
@@ -185,10 +187,29 @@ public class NetworkUtils {
             e.printStackTrace();
         }
 
-        Element title = document.getElementById("concepts");
+        Element documentationText = document.getElementById("main-content");
 
-
-
-        return title.text();
+        return documentationText.html();
     }
+
+    public static String appendRedirectURL(String html) {
+
+        html = html.replaceAll("\\s+","");
+        System.out.println(html);
+        String appendedRedirectURL = "test";
+
+        if(html.isEmpty()) {
+            return appendedRedirectURL;
+        }
+
+        Pattern pattern = Pattern.compile("varmyDefaultPage=\"(.+.html)\"",Pattern.UNICODE_CASE);
+
+        Matcher m = pattern.matcher(html);
+        if(m.find()) {}
+        appendedRedirectURL = m.group(1);
+
+
+        return appendedRedirectURL;
+    }
+
 }
