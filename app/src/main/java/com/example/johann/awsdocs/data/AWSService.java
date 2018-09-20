@@ -1,24 +1,41 @@
 package com.example.johann.awsdocs.data;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 import android.webkit.WebView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
+@Entity(tableName = "services")
 public class AWSService implements Parcelable{
 
-    private String serviceURL;
-    private String serviceName;
-    private ArrayList<String> pagesURL;
-    private String pageBody;
 
-    private ArrayList<AWSDocumentation> serviceDocumentation;
+
+    @PrimaryKey(autoGenerate = true)
+    private int serviceID;
+
+    @ColumnInfo(name = "service_url")
+    private String serviceURL;
+
+    @ColumnInfo(name = "service_name")
+    private String serviceName;
+
+//    private ArrayList<String> pagesURL;
+//    private String pageBody;
+
+//    private ArrayList<AWSDocumentation> serviceDocumentation;
+    @Ignore
     private boolean columnHeader = false;
 
-    public AWSService(String serviceName,String serviceURL) {
+    public AWSService(@NonNull String serviceName, String serviceURL) {
 
         this.serviceName = serviceName;
         this.serviceURL = serviceURL;
@@ -53,14 +70,6 @@ public class AWSService implements Parcelable{
         }
     };
 
-    public String returnURL() {
-        return serviceURL;
-    }
-
-    public String returnName() {
-        return serviceName;
-    }
-
     public void setColumnHeader() {
         this.columnHeader = true;
     }
@@ -68,4 +77,29 @@ public class AWSService implements Parcelable{
     public boolean isColumnHeader() {
         return this.columnHeader;
     }
+
+    public int getServiceID() {
+        return serviceID;
+    }
+
+    public void setServiceID(int serviceID) {
+        this.serviceID = serviceID;
+    }
+
+    public String getServiceURL() {
+        return serviceURL;
+    }
+
+    public void setServiceURL(String serviceURL) {
+        this.serviceURL = serviceURL;
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
 }

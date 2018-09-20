@@ -43,7 +43,7 @@ public class AWSDetailActivity extends AppCompatActivity implements DetailRecycl
         if(getIntent().hasExtra(getString(R.string.main_activity_extra))) {
             mAWSService = getIntent().getParcelableExtra(getString(R.string.main_activity_extra));
         }
-        setTitle(mAWSService.returnName());
+        setTitle(mAWSService.getServiceName());
 
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);

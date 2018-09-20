@@ -2,7 +2,6 @@ package com.example.johann.awsdocs.ui;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
@@ -66,11 +65,11 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
         AWSService awsService = mAwsServiceList.getValue().get(position);
         Class destinationActivity;
         Intent intent;
-        if(awsService.returnURL().contains("UserGuide")) {
+        if(awsService.getServiceURL().contains("UserGuide")) {
 
             destinationActivity = AWSDocumentationActivity.class;
             intent = new Intent(context,destinationActivity);
-            intent.putExtra(getString(R.string.detail_activity_extra),new AWSDocumentation(awsService.returnName(),awsService.returnURL()));
+            intent.putExtra(getString(R.string.detail_activity_extra),new AWSDocumentation(awsService.getServiceName(),awsService.getServiceURL()));
         }
         else{
 

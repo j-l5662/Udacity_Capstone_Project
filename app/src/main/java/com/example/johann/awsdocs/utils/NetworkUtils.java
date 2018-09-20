@@ -13,7 +13,6 @@ import com.android.volley.toolbox.Volley;
 import com.example.johann.awsdocs.R;
 import com.example.johann.awsdocs.data.AWSDocumentation;
 import com.example.johann.awsdocs.data.AWSService;
-import com.example.johann.awsdocs.ui.MainActivity;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -23,10 +22,7 @@ import org.jsoup.select.Elements;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.ref.WeakReference;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.concurrent.CountDownLatch;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -142,7 +138,7 @@ public class NetworkUtils {
         for ( int i = 0; i < titleSections.size(); i++) {
             Element header = titleSections.get(i).select("h3").get(0);
 
-            String header_title = (header.text().isEmpty()) ? awsService.returnName() : header.text();
+            String header_title = (header.text().isEmpty()) ? awsService.getServiceName() : header.text();
 
             AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,"");
             awsDocumentation.setasColumnHeader();

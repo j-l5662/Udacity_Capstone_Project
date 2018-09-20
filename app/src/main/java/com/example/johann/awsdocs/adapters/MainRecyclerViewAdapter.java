@@ -50,7 +50,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
-        String serviceName = mServicesList.get(position).returnName();
+        String serviceName = mServicesList.get(position).getServiceName();
 
         if(mServicesList.get(position).isColumnHeader()) {
 

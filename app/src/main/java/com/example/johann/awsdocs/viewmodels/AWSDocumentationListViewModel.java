@@ -49,7 +49,7 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
         if(NetworkUtils.isAppOnline(androidContext)) {
             Timber.i("Online");
             RequestQueue queue = Volley.newRequestQueue(androidContext);
-            String url = mAWSService.returnURL();
+            String url = mAWSService.getServiceURL();
 
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
@@ -71,7 +71,7 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
                                 }
 
                                 else {
-                                    header_title = mAWSService.returnName();
+                                    header_title = mAWSService.getServiceName();
                                 }
 
                                 AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,"");

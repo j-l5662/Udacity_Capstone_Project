@@ -60,6 +60,7 @@ public class AWSServiceListViewModel extends AndroidViewModel {
                         public void onResponse(String response) {
 
                             Document document = Jsoup.parse(response);
+                            Timber.i(document.html());
 
                             Elements linkColumn = document.getElementsByClass("lb-col lb-tiny-24 lb-mid-21");
 

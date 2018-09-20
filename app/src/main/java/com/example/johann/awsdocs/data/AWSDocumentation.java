@@ -1,14 +1,20 @@
 package com.example.johann.awsdocs.data;
 
+import android.arch.persistence.room.ColumnInfo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class AWSDocumentation implements Parcelable{
 
+    @ColumnInfo(name = "documentation_name")
     private String documentationName;
+
+    @ColumnInfo(name = "documentation_url")
     private String url;
+
     private String text;
 
+    @ColumnInfo(name = "column_header")
     private boolean columnHeader = false;
 
     public AWSDocumentation(String documentationName,
