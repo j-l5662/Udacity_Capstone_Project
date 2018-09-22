@@ -6,6 +6,7 @@ import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -15,6 +16,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.johann.awsdocs.R;
 import com.example.johann.awsdocs.data.AWSService;
 import com.example.johann.awsdocs.utils.NetworkUtils;
+import com.example.johann.awsdocs.utils.ParsingUtils;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,6 +24,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import timber.log.Timber;
 
@@ -56,31 +60,34 @@ public class AWSServiceListViewModel extends AndroidViewModel {
             Timber.i(url);
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
+
                         @Override
                         public void onResponse(String response) {
 
                             Document document = Jsoup.parse(response);
-                            Timber.i(document.html());
 
-                            Elements linkColumn = document.getElementsByClass("lb-col lb-tiny-24 lb-mid-21");
+                            Elements titleSections = document.getElementsByClass("title-wrapper section");
 
-                            Elements columnTitles = document.getElementsByClass("lb-tiny-v-margin lb-rtxt");
-                            for(int i = 0; i < columnTitles.size();i++) {
+                            Elements serviceTitles = document.getElementsByClass("aws-text-box section");
 
-                               String columnTitle = columnTitles.get(i).text();
+
+                            for(int i = 0; i < titleSections.size();i++) {
+
+                                String columnTitle = titleSections.get(i).getElementsByClass("twelve columns").select("h3").text();
 
                                 AWSService columnHeader = new AWSService(columnTitle,null);
                                 columnHeader.setColumnHeader();
                                 awsServiceArrayList.add(columnHeader);
 
-                                Elements links = linkColumn.get(i).getElementsByClass("lb-txt-none lb-txt");
-                                for (Element t : links){
+                                Elements service = serviceTitles.get(i+1).getElementsByClass("  ").select("p");
+                                for (Element t : service){
 
-                                    String documnetationName = t.html();
-                                    String documentationURL = t.attr("href");
+                                    String documentationName = t.text();
+                                    String documentationURL = t.select("a").attr("href");
 
-                                    documentationURL = awsURL + documentationURL;
-                                    awsServiceArrayList.add(new AWSService(documnetationName,documentationURL));
+                                    documentationURL = ParsingUtils.appendURL(documentationURL);
+
+                                    awsServiceArrayList.add(new AWSService(documentationName,documentationURL));
                                 }
                             }
 

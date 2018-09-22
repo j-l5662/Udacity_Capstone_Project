@@ -96,23 +96,45 @@ public class NetworkUtils {
         ArrayList<AWSService> awsServiceList = new ArrayList<>();
 
         try {
-            file = context.getAssets().open("aws.html");
+            file = context.getAssets().open("newaws.html");
             document = Jsoup.parse(file,"UTF-8","Test");
         }
         catch (IOException e){
             e.printStackTrace();
         }
-        Elements link = document.select("div[id^=aws-nav-flyout-3-doc-]");
 
-        for(Element ele : link) {
-            String title = ele.select("h6").first().text();
-            AWSService columnHeader = new AWSService(title,null);
+
+        Elements columnHeaders = document.getElementsByClass("awsui-cards-card-header-inner");
+
+        Elements columnServices = document.getElementsByClass("awsui-cards-card-section");
+//        for(Element ele : link) {
+//            String title = ele.text();
+//
+//            AWSService columnHeader = new AWSService(title,null);
+//            columnHeader.setColumnHeader();
+//            awsServiceList.add(columnHeader);
+//            Elements text = ele.getElementsByClass("aws-link");
+//            for (Element t : text){
+//                awsServiceList.add(new AWSService(t.text(),t.select("a").attr("abs:href")));
+//            }
+//        }
+
+        for(int i = 0; i < columnHeaders.size();i++) {
+            String columnTitle = columnHeaders.get(i).getElementsByClass("ng-binding ng-scope").text();
+            AWSService columnHeader = new AWSService(columnTitle,null);
             columnHeader.setColumnHeader();
             awsServiceList.add(columnHeader);
-            Elements text = ele.getElementsByClass("aws-link");
-            for (Element t : text){
-                awsServiceList.add(new AWSService(t.text(),t.select("a").attr("abs:href")));
+
+            Elements services = columnServices.get(i).select("awsdocs-service-link");
+            for(Element service : services) {
+
+                //get teh href for the links...
+                awsServiceList.add(new AWSService(service.text(),null));
             }
+
+
+
+
         }
 
         return awsServiceList;

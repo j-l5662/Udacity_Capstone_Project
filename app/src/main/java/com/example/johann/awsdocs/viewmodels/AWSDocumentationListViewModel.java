@@ -50,6 +50,7 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
             Timber.i("Online");
             RequestQueue queue = Volley.newRequestQueue(androidContext);
             String url = mAWSService.getServiceURL();
+            Timber.i(url);
 
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
@@ -57,53 +58,45 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
                         public void onResponse(String response) {
                             ArrayList<AWSDocumentation> awsDocumentations = new ArrayList<>();
                             Document document = Jsoup.parse(response);
+
                             Elements titleSections = document.getElementsByClass("title-wrapper section");
-                            Elements tableSections = document.getElementsByClass("table-wrapper section");
+                            Elements tableSections = document.getElementsByClass("aws-text-box section");
 
                             int tableIterator = (titleSections.size() == 0 ) ? 1 : titleSections.size();
 
+                            Timber.i(String.valueOf(tableIterator));
+
                             for (int i = 0; i < tableIterator; i++) {
-                                Element header;
+                                Elements header;
                                 String header_title;
                                 if(titleSections.size() != 0) {
-                                    header = titleSections.get(i).select("h3").get(0);
+                                    header = titleSections.get(i).getElementsByClass("twelve columns").select("h3");
+
                                     header_title = header.text();
+//                                    Timber.i(header_title);
                                 }
 
                                 else {
                                     header_title = mAWSService.getServiceName();
                                 }
 
-                                AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,"");
-                                awsDocumentation.setasColumnHeader();
+                                Element tableSection = tableSections.get(i);
+                                Elements tables = tableSection.getElementsByClass("  ").select("p");
+
+
+                                //TODO Get Link Here
+                                Element htmlPTag = tables.get(1);
+
+                                String linkContent = htmlPTag.select("a").attr("href");
+
+                                AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,linkContent);
                                 awsDocumentations.add(awsDocumentation);
 
-
-                                Element tableSection = tableSections.get(i);
-                                Elements tables = tableSection.select("table");
-                                for (Element table : tables) {
-                                    Elements rows = table.select("tr");
-
-                                    for (int j = 0; j < rows.size(); j++) {
-                                        Element row = rows.get(j);
-                                        Elements column = row.select("td");
-
-                                        Elements links = column.select("a");
-
-                                        for (Element link : links) {
-                                            String linkContent = link.attr("abs:href");
-                                            String linkContentText = link.text();
-                                            if (linkContentText.equals("HTML") || linkContentText.equals("PDF") || linkContentText.equals("Kindle") || linkContentText.isEmpty()) {
-                                            } else {
-                                                awsDocumentations.add(new AWSDocumentation(linkContentText, linkContent));
-                                            }
-                                        }
-                                    }
-                                }
                             }
-                            mAWSDocumentations.setValue(awsDocumentations);
+                                mAWSDocumentations.setValue(awsDocumentations);
+                            }
                         }
-                    }, new Response.ErrorListener() {
+                    , new Response.ErrorListener() {
 
                 @Override
                 public void onErrorResponse(VolleyError error) {

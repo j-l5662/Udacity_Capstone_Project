@@ -7,47 +7,29 @@ import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Network;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.HurlStack;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.johann.awsdocs.data.AWSDocumentation;
 import com.example.johann.awsdocs.utils.NetworkUtils;
 
-import org.jetbrains.annotations.Async;
-import org.jsoup.Connection;
-import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLDecoder;
-import java.util.ArrayList;
 
 import timber.log.Timber;
 
 public class AWSDetailPageViewModel extends AndroidViewModel {
 
-    private Application mApplicaiton;
+    private Application mApplication;
     private AWSDocumentation mAWSDocumentation;
     private MutableLiveData<String> mAWSHTMLPage = new MutableLiveData<>();
 
     public AWSDetailPageViewModel(Application application, AWSDocumentation awsDocumentation) {
 
         super(application);
-        this.mApplicaiton = application;
+        this.mApplication = application;
         this.mAWSDocumentation = awsDocumentation;
 
         loadHTML();
@@ -58,8 +40,7 @@ public class AWSDetailPageViewModel extends AndroidViewModel {
     }
     private void loadHTML() {
 
-        Context androidContext = mApplicaiton.getApplicationContext();
-
+        Context androidContext = mApplication.getApplicationContext();
 
         if(NetworkUtils.isAppOnline(androidContext)) {
             Timber.i("Online");
@@ -71,9 +52,12 @@ public class AWSDetailPageViewModel extends AndroidViewModel {
                     String location;
                     String url = mAWSDocumentation.getUrl();
 
+                    Timber.i(url);
+
                     while (true)
                     {
                         try{
+
 
                             resourceUrl = new URL(url);
                             conn        = (HttpURLConnection) resourceUrl.openConnection();
@@ -106,19 +90,25 @@ public class AWSDetailPageViewModel extends AndroidViewModel {
                     try {
 
                         Document doc = Jsoup.connect(url).get();
+                        String newURL = url;
 
-                        String documentationHTML = NetworkUtils.appendRedirectURL(doc.html());
+                        Timber.i(url);
 
-//                        String metaURL = doc.select("meta").get(3).attr("abs:content").toString();
-
-                        String newURL = url+documentationHTML;
+                        if(!url.contains(".html")) {
+                            String documentationHTML = NetworkUtils.appendRedirectURL(doc.html());
+                            newURL = url+documentationHTML;
+                        }
 
                         Document newDoc = Jsoup.connect(newURL).get();
 
-                        String urlData = newDoc.getElementById("main-col-body").html();
+                        Element urlData = newDoc.getElementById("main-col-body");
 
+                        if(urlData.getElementById("divRegionDisclaimer") != null ||  urlData.select("table") != null) {
+                            urlData.getElementById("divRegionDisclaimer").remove();
+                            urlData.select("table").get(0).remove();
+                        }
 //                        Timber.i(urlData);
-                        mAWSHTMLPage.postValue(urlData);
+                        mAWSHTMLPage.postValue(urlData.html());
                     }
                     catch (Exception e) {
                         e.printStackTrace();
