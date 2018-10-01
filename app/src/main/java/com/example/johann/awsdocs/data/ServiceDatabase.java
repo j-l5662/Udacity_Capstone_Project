@@ -13,20 +13,6 @@ import android.support.annotation.NonNull;
 public abstract class ServiceDatabase extends RoomDatabase {
 
     public abstract ServiceDao serviceDao();
-    private static ServiceDatabase INSTANCE;
-
-    public static ServiceDatabase getDatabase(Context context) {
-        if(INSTANCE == null) {
-            synchronized (ServiceDatabase.class) {
-                if(INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ServiceDatabase.class, "services")
-                            .fallbackToDestructiveMigration()
-                            .build();
-                }
-            }
-        }
-        return INSTANCE;
-    }
 
     @NonNull
     @Override

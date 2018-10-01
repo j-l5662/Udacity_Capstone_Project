@@ -28,11 +28,7 @@ public class AWSService implements Parcelable{
     @ColumnInfo(name = "service_name")
     private String serviceName;
 
-//    private ArrayList<String> pagesURL;
-//    private String pageBody;
-
-//    private ArrayList<AWSDocumentation> serviceDocumentation;
-    @Ignore
+    @ColumnInfo(name = "column_header")
     private boolean columnHeader = false;
 
     public AWSService(@NonNull String serviceName, String serviceURL) {
@@ -41,10 +37,12 @@ public class AWSService implements Parcelable{
         this.serviceURL = serviceURL;
     }
 
-    public AWSService(Parcel in) {
+    private AWSService(Parcel in) {
 
         this.serviceName = in.readString();
         this.serviceURL = in.readString();
+        this.serviceID = in.readInt();
+        this.columnHeader = in.readByte() !=0;
     }
 
     @Override
@@ -52,6 +50,8 @@ public class AWSService implements Parcelable{
 
         parcel.writeString(serviceName);
         parcel.writeString(serviceURL);
+        parcel.writeInt(serviceID);
+        parcel.writeByte((byte) (columnHeader ? 1 : 0));
     }
 
     @Override
@@ -70,12 +70,12 @@ public class AWSService implements Parcelable{
         }
     };
 
-    public void setColumnHeader() {
-        this.columnHeader = true;
-    }
-
     public boolean isColumnHeader() {
         return this.columnHeader;
+    }
+
+    public void setColumnHeader(boolean columnHeader) {
+        this.columnHeader = columnHeader;
     }
 
     public int getServiceID() {

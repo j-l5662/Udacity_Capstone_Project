@@ -5,9 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--<TextView-->
-        <!--style="@style/ListHeader"-->
-        <!--android:id="@+id/aws_detail_url_text_view"/>-->
 
     <ListView
         android:layout_width="match_parent"

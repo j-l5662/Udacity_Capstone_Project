@@ -14,6 +14,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.johann.awsdocs.data.AWSDocumentation;
 import com.example.johann.awsdocs.data.AWSService;
+import com.example.johann.awsdocs.repository.DocRepository;
 import com.example.johann.awsdocs.utils.NetworkUtils;
 
 import org.jsoup.Jsoup;
@@ -22,6 +23,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import timber.log.Timber;
 
@@ -64,8 +66,6 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
 
                             int tableIterator = (titleSections.size() == 0 ) ? 1 : titleSections.size();
 
-                            Timber.i(String.valueOf(tableIterator));
-
                             for (int i = 0; i < tableIterator; i++) {
                                 Elements header;
                                 String header_title;
@@ -73,7 +73,6 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
                                     header = titleSections.get(i).getElementsByClass("twelve columns").select("h3");
 
                                     header_title = header.text();
-//                                    Timber.i(header_title);
                                 }
 
                                 else {
@@ -90,6 +89,7 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
                                 String linkContent = htmlPTag.select("a").attr("href");
 
                                 AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,linkContent);
+                                awsDocumentation.setAwsService(mAWSService.getServiceName());
                                 awsDocumentations.add(awsDocumentation);
 
                             }
@@ -108,7 +108,28 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
         }
         else {
             Timber.i("Offline");
-            mAWSDocumentations.setValue(NetworkUtils.makeListRequestOffline(androidContext,mAWSService));
+
+            ArrayList<AWSDocumentation> offlineAWSDocumentations = new ArrayList<>();
+
+            DocRepository docRepository = new DocRepository(getApplication());
+
+            try {
+                offlineAWSDocumentations = docRepository.getServiceDocs(mAWSService.getServiceName());
+            }
+            catch(ExecutionException e) {
+                Timber.i("Interrupt Exception: " + e.getMessage());
+                e.printStackTrace();
+            }
+            catch(InterruptedException e) {
+                Timber.i("Execution Exception: " + e.getMessage());
+                e.printStackTrace();
+            }
+            finally {
+                if(offlineAWSDocumentations.size() == 0) {
+                    Timber.i("Error: Documentation Query Empty");
+                }
+                mAWSDocumentations.postValue(offlineAWSDocumentations);
+            }
         }
     }
 }

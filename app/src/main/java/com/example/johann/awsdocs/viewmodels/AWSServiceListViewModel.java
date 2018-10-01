@@ -1,6 +1,7 @@
 package com.example.johann.awsdocs.viewmodels;
 
 import android.app.Application;
+import android.app.Service;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
@@ -15,6 +16,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.johann.awsdocs.R;
 import com.example.johann.awsdocs.data.AWSService;
+import com.example.johann.awsdocs.repository.ServiceRepository;
 import com.example.johann.awsdocs.utils.NetworkUtils;
 import com.example.johann.awsdocs.utils.ParsingUtils;
 
@@ -26,6 +28,7 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 import timber.log.Timber;
 
@@ -33,13 +36,13 @@ public class AWSServiceListViewModel extends AndroidViewModel {
 
     private MutableLiveData<ArrayList<AWSService>> mServiceList = new MutableLiveData<>();
     private Application mApplication;
-
-    private final String awsURL = "https://aws.amazon.com/";
+    private ServiceRepository mServiceRepository;
 
     public AWSServiceListViewModel(Application application) {
 
         super(application);
         mApplication = application;
+        mServiceRepository = new ServiceRepository(mApplication);
 
         loadServiceList();
     }
@@ -52,8 +55,10 @@ public class AWSServiceListViewModel extends AndroidViewModel {
 
         Context androidContext = mApplication.getApplicationContext();
         final ArrayList<AWSService> awsServiceArrayList = new ArrayList<>();
-        if(NetworkUtils.isAppOnline(androidContext)) {
+        if (NetworkUtils.isAppOnline(androidContext)) {
             Timber.i("Online");
+
+
             RequestQueue queue = Volley.newRequestQueue(androidContext);
             String url = mApplication.getApplicationContext().getString(R.string.aws_doc_url);
 
@@ -71,23 +76,23 @@ public class AWSServiceListViewModel extends AndroidViewModel {
                             Elements serviceTitles = document.getElementsByClass("aws-text-box section");
 
 
-                            for(int i = 0; i < titleSections.size();i++) {
+                            for (int i = 0; i < titleSections.size(); i++) {
 
                                 String columnTitle = titleSections.get(i).getElementsByClass("twelve columns").select("h3").text();
 
-                                AWSService columnHeader = new AWSService(columnTitle,null);
-                                columnHeader.setColumnHeader();
+                                AWSService columnHeader = new AWSService(columnTitle, null);
+                                columnHeader.setColumnHeader(true);
                                 awsServiceArrayList.add(columnHeader);
 
-                                Elements service = serviceTitles.get(i+1).getElementsByClass("  ").select("p");
-                                for (Element t : service){
+                                Elements service = serviceTitles.get(i + 1).getElementsByClass("  ").select("p");
+                                for (Element t : service) {
 
                                     String documentationName = t.text();
                                     String documentationURL = t.select("a").attr("href");
 
                                     documentationURL = ParsingUtils.appendURL(documentationURL);
 
-                                    awsServiceArrayList.add(new AWSService(documentationName,documentationURL));
+                                    awsServiceArrayList.add(new AWSService(documentationName, documentationURL));
                                 }
                             }
 
@@ -101,11 +106,26 @@ public class AWSServiceListViewModel extends AndroidViewModel {
                 }
             });
             queue.add(stringRequest);
-        }
-        else {
-            //TODO Room Request
+        } else {
             Timber.i("Offline");
-            mServiceList.setValue(NetworkUtils.makeAWSMainRequestOffline(androidContext));
+            ArrayList<AWSService> offlineAWSArrayList = new ArrayList<>();
+            try{
+               offlineAWSArrayList = mServiceRepository.getServices();
+            }
+            catch(InterruptedException e) {
+                Timber.i("Interrupt Exception: " + e.getMessage());
+                e.printStackTrace();
+            }
+            catch (ExecutionException e) {
+                Timber.i("Execution Exception: " + e.getMessage());
+                e.printStackTrace();
+            }
+            finally {
+                if(offlineAWSArrayList.size() == 0) {
+                    Timber.i("Error: Query Empty");
+                }
+                    mServiceList.postValue(offlineAWSArrayList);
+            }
         }
     }
 }

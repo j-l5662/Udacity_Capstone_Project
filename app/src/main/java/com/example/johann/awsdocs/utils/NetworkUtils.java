@@ -69,7 +69,7 @@ public class NetworkUtils {
                         for(Element ele : link) {
                             String title = ele.select("h6").first().text();
                             AWSService columnHeader = new AWSService(title,null);
-                            columnHeader.setColumnHeader();
+                            columnHeader.setColumnHeader(true);
                             awsServiceList.add(columnHeader);
                             Elements text = ele.getElementsByClass("aws-link");
                             for (Element t : text){
@@ -122,7 +122,7 @@ public class NetworkUtils {
         for(int i = 0; i < columnHeaders.size();i++) {
             String columnTitle = columnHeaders.get(i).getElementsByClass("ng-binding ng-scope").text();
             AWSService columnHeader = new AWSService(columnTitle,null);
-            columnHeader.setColumnHeader();
+            columnHeader.setColumnHeader(true);
             awsServiceList.add(columnHeader);
 
             Elements services = columnServices.get(i).select("awsdocs-service-link");
@@ -163,7 +163,7 @@ public class NetworkUtils {
             String header_title = (header.text().isEmpty()) ? awsService.getServiceName() : header.text();
 
             AWSDocumentation awsDocumentation = new AWSDocumentation(header_title,"");
-            awsDocumentation.setasColumnHeader();
+            awsDocumentation.setColumnHeader(true);
             awsDocumentations.add(awsDocumentation);
 
             Element tableSection = tableSections.get(i);

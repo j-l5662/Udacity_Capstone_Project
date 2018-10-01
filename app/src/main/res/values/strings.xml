@@ -3,4 +3,7 @@
     <string name="aws_doc_url">https://www.amazonaws.cn/en/documentation/</string>
     <string name="main_activity_extra">service_detail</string>
     <string name="detail_activity_extra">documentation_detail</string>
+
+    <string name="navigation_open">open</string>
+    <string name="navigation_close">close</string>
 </resources>

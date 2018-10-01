@@ -6,7 +6,7 @@ import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
 import com.example.johann.awsdocs.data.AWSDocumentation;
-import com.example.johann.awsdocs.viewmodels.AWSDetailPageViewModel;
+import com.example.johann.awsdocs.viewmodels.AWSDocumentationPageViewModel;
 
 public class AWSDetailPageViewModelFactory extends ViewModelProvider.NewInstanceFactory {
 
@@ -23,6 +23,6 @@ public class AWSDetailPageViewModelFactory extends ViewModelProvider.NewInstance
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
 
-        return (T) new AWSDetailPageViewModel(mApplication,mAWSDocumentation);
+        return (T) new AWSDocumentationPageViewModel(mApplication,mAWSDocumentation);
     }
 }
