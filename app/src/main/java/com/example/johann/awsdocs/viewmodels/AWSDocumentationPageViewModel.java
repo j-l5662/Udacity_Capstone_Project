@@ -65,8 +65,8 @@ public class AWSDocumentationPageViewModel extends AndroidViewModel {
                             resourceUrl = new URL(url);
                             conn        = (HttpURLConnection) resourceUrl.openConnection();
 
-                            conn.setConnectTimeout(1500);
-                            conn.setReadTimeout(1500);
+                            conn.setConnectTimeout(1000);
+                            conn.setReadTimeout(1000);
                             conn.setInstanceFollowRedirects(false);
                             conn.setRequestProperty("User-Agent", "Mozilla/5.0...");
 
@@ -103,8 +103,6 @@ public class AWSDocumentationPageViewModel extends AndroidViewModel {
                         Document newDoc = Jsoup.connect(newURL).get();
 
                         String urlData = newDoc.html();
-
-                        //TODO Add this to the Room Database
                         mAWSDocumentation.setHtmlText(urlData);
                         Timber.i("SERVICE IS" +mAWSDocumentation.getAwsService() );
 

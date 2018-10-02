@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="@dimen/widget_margin">
+
+    <TextView
+        android:id="@+id/aws_widget_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/widget_list_view"
+        android:dividerHeight="1dp"
+        android:divider="#eeeeee"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_saved_services"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -6,43 +6,48 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="I/" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef788dfc-783b-459e-ab9f-497cbf283815" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/DocumentationDatabase.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/repository/DocRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/repository/ServiceRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/main_options_menu.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/WidgetListAdapter.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetProvider.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetRemoteViewFactory.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetRemoteViewService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/aws_icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/awswidget_list_view.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/awswidget_provider.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-v14/dimens.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/xml/awswidget_provider_info.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSService.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/DocumentationDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/DocumentationDao.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/ServiceDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/ServiceDao.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/ServiceDatabase.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/ServiceDatabase.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/factory/AWSDetailPageViewModelFactory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/factory/AWSDetailPageViewModelFactory.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDocumentationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDocumentationActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/aws.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/NetworkUtils.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDetailPageViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_detail.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_documentation.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_documentation.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,186 +64,164 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Udacity_Capstone_Project" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Udacity_Capstone_Project" type="f1a62948:ProjectNode" />
+                <item name=":app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Udacity_Capstone_Project" type="f1a62948:ProjectNode" />
+                <item name=":app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Udacity_Capstone_Project" type="f1a62948:ProjectNode" />
+                <item name=":app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="install" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AWSDocumentationListViewModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="531">
-                  <caret line="98" column="22" lean-forward="false" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#4108#4311#0" expanded="true" />
-                    <element signature="e#4310#4311#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AWSService.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AWSDocumentationActivity.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDocumentationActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="213">
-                  <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1922#1963#0" expanded="true" />
-                    <element signature="e#2031#2072#0" expanded="true" />
-                    <element signature="e#2235#2259#0" expanded="true" />
-                    <element signature="e#2260#2285#0" expanded="true" />
-                    <element signature="e#2455#2990#0" expanded="true" />
-                    <element signature="e#2989#2990#0" expanded="true" />
-                    <element signature="e#3039#3356#0" expanded="true" />
-                    <element signature="e#3355#3356#0" expanded="true" />
-                    <element signature="e#3943#4325#0" expanded="true" />
-                    <element signature="e#4324#4325#0" expanded="true" />
-                    <element signature="method#launchNewDetailActivity#0;class#AWSDocumentationActivity#0" expanded="false" />
-                    <element signature="e#6492#6533#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AWSDocumentation.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-51">
-                  <caret line="43" column="47" lean-forward="false" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AWSDocumentationPageViewModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="362">
-                  <caret line="122" column="9" lean-forward="false" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/build.gradle">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DocumentationDatabase.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/DocumentationDatabase.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DocRepository.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/repository/DocRepository.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#2100#2361#0" expanded="true" />
-                    <element signature="e#2360#2361#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="47" column="4" lean-forward="false" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
-                  <folding>
-                    <element signature="e#3458#3499#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main_options_menu.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main_options_menu.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-              <provider editor-type-id="android-designer2">
-                <state />
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="AWSServiceListViewModel.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ServiceRepository.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/repository/ServiceRepository.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="496">
-                  <caret line="67" column="35" lean-forward="false" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
-                  <folding>
-                    <element signature="e#1637#1861#0" expanded="true" />
-                    <element signature="e#1860#1861#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ServiceDao.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/ServiceDao.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AWSWidgetProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="awswidget_provider.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/awswidget_provider.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AWSServiceListViewModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AWSDocumentationPageViewModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="69" column="45" lean-forward="false" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="84" column="56" lean-forward="false" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="awswidget_list_view.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/awswidget_list_view.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="Class" />
-        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -250,6 +233,10 @@
       <find>timber</find>
       <find>awsdocs-service-name ng-binding</find>
     </findStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/Documents/keystore1" />
+    <option name="KEY_ALIAS" value="udacity" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -418,6 +405,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugGoogleServices" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -635,6 +626,11 @@
                 <option name="name" value="compileReleaseUnitTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Installs the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Installs the android (on device) tests for the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="installDebugAndroidTest" />
@@ -658,6 +654,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="preparePUBLISHED_DEXDebugAndroidTestForPublishing" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="validateSigningRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1037,6 +1037,10 @@
                 <option name="name" value="generateReleaseResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseGoogleServices" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of root project 'Udacity_Capstone_Project'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
@@ -1166,6 +1170,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="generateDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="processDebugGoogleServices" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1383,6 +1391,11 @@
                 <option name="name" value="compileReleaseUnitTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Installs the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="installRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Installs the android (on device) tests for the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="installDebugAndroidTest" />
@@ -1406,6 +1419,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="preparePUBLISHED_DEXDebugAndroidTestForPublishing" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="validateSigningRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1781,6 +1798,10 @@
                 <option name="name" value="generateReleaseResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="processReleaseGoogleServices" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of project ':app'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="properties" />
@@ -1804,6 +1825,9 @@
                           <list>
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.1.4/55bc7ad7b19dbd81a1841366c268f2614b6cd724/gradle-3.1.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.1.4/8f9a726f69c0c8fa3f447566717a21e6b394ed9/gradle-3.1.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/15d345a81ab5756fc59b81ba99435d20568ee8e6/google-services-4.0.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/a9fdd01c6f67fa7d12cc156a7a20a5086fbd1287/google-services-4.0.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.fabric.tools/gradle/1.25.4/e1475d609b53783d837c84cc3ec0abcfb5c9a898/gradle-1.25.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-core/3.1.4/6a543ae131c6c5e83d5549b56e92ff286f40cc33/gradle-core-3.1.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-core/3.1.4/4c846d065331c2a11ed605619613833a842a7b8d/gradle-core-3.1.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/bundletool/0.1.0-alpha01/f7c303e37818223bd98566fcbea29aa0964c4d06/bundletool-0.1.0-alpha01.jar" />
@@ -1956,6 +1980,9 @@
                           <list>
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.1.4/55bc7ad7b19dbd81a1841366c268f2614b6cd724/gradle-3.1.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.1.4/8f9a726f69c0c8fa3f447566717a21e6b394ed9/gradle-3.1.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/15d345a81ab5756fc59b81ba99435d20568ee8e6/google-services-4.0.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/a9fdd01c6f67fa7d12cc156a7a20a5086fbd1287/google-services-4.0.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.fabric.tools/gradle/1.25.4/e1475d609b53783d837c84cc3ec0abcfb5c9a898/gradle-1.25.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-core/3.1.4/6a543ae131c6c5e83d5549b56e92ff286f40cc33/gradle-core-3.1.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-core/3.1.4/4c846d065331c2a11ed605619613833a842a7b8d/gradle-core-3.1.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/bundletool/0.1.0-alpha01/f7c303e37818223bd98566fcbea29aa0964c4d06/bundletool-0.1.0-alpha01.jar" />
@@ -2270,17 +2297,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/recyclerviews/TitleRecyclerView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/recyclerviews/MainRecyclerView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/log/NoLoggingTree.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/recyclerviews/MainRecyclerViewAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_services_recycler_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_detail_list_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AwsDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentationPage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSListViewModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_title_recycler_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/Parsing.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_detail_recycler_view.xml" />
@@ -2290,18 +2306,15 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_recycler_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_recycler_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/MainRecyclerViewAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/factory/AWSDocumentationListViewModelFactory.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/factory/AWSDetailPageViewModelFactory.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/ParsingUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_navigation_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/aws_activity_documentation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSOverflowLinksViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDetailPageViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_overflow_adapter.xml" />
@@ -2313,19 +2326,33 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/DocumentationDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/repository/DocRepository.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationListViewModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/AWSDocumentation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main_options_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDocumentationActivity.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/Widget/AWSWidgetProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/Widget/AWSWidgetRemoteViewFactory.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/Widget/AWSWidgetRemoteViewService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/WidgetListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/awswidget_provider_info.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/awswidget_list_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetRemoteViewService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetRemoteViewFactory.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/awswidget_provider.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/log/Analytics.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="53" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
@@ -2345,10 +2372,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2372,21 +2396,7 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="awsdocs" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Udacity_Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="awsdocs" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Udacity_Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="awsdocs" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Udacity_Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
@@ -2394,6 +2404,13 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="awsdocs" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Udacity_Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="awsdocs" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Udacity_Capstone_Project" type="1abcf292:AndroidViewProjectNode" />
@@ -2410,6 +2427,24 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Udacity_Capstone_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Udacity_Capstone_Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Udacity_Capstone_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Udacity_Capstone_Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2419,6 +2454,11 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.profiler.active" value="true" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.Flavors" value="" />
+    <property name="ExportApk.BuildType" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2515,6 +2555,53 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="Udacity_Capstone_Project" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="Udacity_Capstone_Project" />
+      <envs />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -2564,18 +2651,6 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="Udacity_Capstone_Project" />
-      <envs />
-    </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
@@ -2596,28 +2671,37 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969475" sideWeight="0.5114504" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17521368" sideWeight="0.51609445" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2725322" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17521368" sideWeight="0.48854962" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30150214" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17521368" sideWeight="0.48390558" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30150214" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2628,6 +2712,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="100" y="123" width="1480" height="827" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2672,95 +2757,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/recyclerview-v7/27.1.1/ad225a74247e675db0b05ea4f8b17202acbb7f9d/recyclerview-v7-27.1.1-sources.jar!/android/support/v7/widget/RecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="11778" column="20" lean-forward="false" selection-start-line="11778" selection-start-column="20" selection-end-line="11778" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.volley/volley/1.1.1/3fb00d0da53c4e9f35a519da6e22bc2de7463816/volley-1.1.1-sources.jar!/com/android/volley/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/aws2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8045">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/log/NoLoggingTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/viewmodel/1.1.0/e4c0c5d65f92ccad0b0148ac2f01b540ac7a711e/viewmodel-1.1.0-sources.jar!/android/arch/lifecycle/AndroidViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_title_recycler_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_title_recycler_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="55" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/DetailRecyclerViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="99" column="25" lean-forward="false" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_recycler_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/MainRecyclerViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2813,14 +2809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/utils/ParsingUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -2838,17 +2826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="51" lean-forward="false" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-27/android.jar!/android/view/View.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -2860,7 +2837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2871,26 +2847,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/aws_activity_detail.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2901,7 +2867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2912,7 +2877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2920,7 +2884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="49" lean-forward="false" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2931,7 +2894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2947,15 +2909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/ServiceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2967,38 +2920,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSOverflowLinksViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/repository/ServiceRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="67" column="35" lean-forward="false" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
-          <folding>
-            <element signature="e#1637#1861#0" expanded="true" />
-            <element signature="e#1860#1861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="77" column="39" lean-forward="false" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSOverflowLinksViewModel.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/DocumentationDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="22" column="60" lean-forward="false" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3015,8 +2941,8 @@
         <state relative-caret-position="294">
           <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
           <folding>
-            <element signature="e#2100#2361#0" expanded="true" />
-            <element signature="e#2360#2361#0" expanded="true" />
+            <element signature="e#2100#2361#0" expanded="false" />
+            <element signature="e#2360#2361#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3025,15 +2951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3041,7 +2958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3053,8 +2969,8 @@
         <state relative-caret-position="531">
           <caret line="98" column="22" lean-forward="false" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
           <folding>
-            <element signature="e#4108#4311#0" expanded="true" />
-            <element signature="e#4310#4311#0" expanded="true" />
+            <element signature="e#4108#4311#0" expanded="false" />
+            <element signature="e#4310#4311#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3067,50 +2983,181 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDocumentationActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/repository/ServiceRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+        <state relative-caret-position="496">
+          <caret line="67" column="35" lean-forward="false" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
           <folding>
-            <element signature="e#1922#1963#0" expanded="true" />
-            <element signature="e#2031#2072#0" expanded="true" />
-            <element signature="e#2235#2259#0" expanded="true" />
-            <element signature="e#2260#2285#0" expanded="true" />
-            <element signature="e#2455#2990#0" expanded="true" />
-            <element signature="e#2989#2990#0" expanded="true" />
-            <element signature="e#3039#3356#0" expanded="true" />
-            <element signature="e#3355#3356#0" expanded="true" />
-            <element signature="e#3943#4325#0" expanded="true" />
-            <element signature="e#4324#4325#0" expanded="true" />
-            <element signature="method#launchNewDetailActivity#0;class#AWSDocumentationActivity#0" expanded="false" />
-            <element signature="e#6492#6533#0" expanded="true" />
+            <element signature="e#1637#1861#0" expanded="false" />
+            <element signature="e#1860#1861#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/data/ServiceDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="122" column="9" lean-forward="false" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+        <state relative-caret-position="120">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDocumentationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="916">
+          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+          <folding>
+            <element signature="method#launchNewDetailActivity#0;class#AWSDocumentationActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/AWSDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="77" column="39" lean-forward="false" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/WidgetListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="469">
+          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/AWS_Simple_Icons_AWS_Cloud.svg" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/adapters/MainRecyclerViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/aws_icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/awswidget_provider_info.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetRemoteViewFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="95" column="49" lean-forward="false" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetRemoteViewService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/awswidget_list_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/log/Analytics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/widget/AWSWidgetProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/awswidget_provider.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/ui/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="47" column="4" lean-forward="false" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
-          <folding>
-            <element signature="e#3458#3499#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="609">
+          <caret line="84" column="56" lean-forward="false" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSServiceListViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/johann/awsdocs/viewmodels/AWSDocumentationPageViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="69" column="45" lean-forward="false" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

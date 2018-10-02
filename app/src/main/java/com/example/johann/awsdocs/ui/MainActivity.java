@@ -13,7 +13,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.crashlytics.android.Crashlytics;
 import com.example.johann.awsdocs.BuildConfig;
 import com.example.johann.awsdocs.R;
 import com.example.johann.awsdocs.adapters.MainRecyclerViewAdapter;
@@ -45,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
     private ServiceRepository mServiceRepository;
     private DocRepository mDocRepository;
     private FirebaseAnalytics mFirebaseAnalytics;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
         }
         ButterKnife.bind(this);
 
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
 
@@ -67,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
         mServiceRepository = new ServiceRepository(getApplicationContext());
 
         mRecyclerView.setLayoutManager(mLayoutManager);
+
+        sendLoggingEventtoFirebase();
 
         setupViewModel();
     }
@@ -135,5 +142,12 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
         mServiceRepository.deleteAllDocs();
 
         mDocRepository.deleteAllDocs();
+    }
+
+    private void sendLoggingEventtoFirebase() {
+
+        Bundle bundle = new Bundle();
+
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.APP_OPEN,bundle);
     }
 }

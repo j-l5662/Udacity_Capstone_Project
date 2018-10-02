@@ -1,0 +1,45 @@
+{
+  "project_info": {
+    "project_number": "414518167572",
+    "firebase_url": "https://aws-docs.firebaseio.com",
+    "project_id": "aws-docs",
+    "storage_bucket": "aws-docs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414518167572:android:c344c5041a10f803",
+        "android_client_info": {
+          "package_name": "com.example.johann.awsdocs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414518167572-eklh3dagcvanoatrit44icmj0g27i73q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcnC3NzhRqBV1_0H0ZWL8UH7zllWKuAoE"
+        },
+        {
+          "current_key": "AIzaSyDcnC3NzhRqBV1_0H0ZWL8UH7zllWKuAoE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
