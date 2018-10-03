@@ -7,7 +7,6 @@ import android.os.AsyncTask;
 import com.example.johann.awsdocs.data.AWSService;
 import com.example.johann.awsdocs.data.ServiceDatabase;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.ExecutionException;

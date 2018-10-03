@@ -31,7 +31,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import timber.log.Timber;
 
 public class AWSDocumentationActivity extends AppCompatActivity {
 

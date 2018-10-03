@@ -13,9 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.crashlytics.android.Crashlytics;
 import com.example.johann.awsdocs.BuildConfig;
@@ -33,6 +30,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.fabric.sdk.android.Fabric;
 import timber.log.Timber;
 import timber.log.Timber.DebugTree;
 
@@ -53,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         if (BuildConfig.DEBUG)

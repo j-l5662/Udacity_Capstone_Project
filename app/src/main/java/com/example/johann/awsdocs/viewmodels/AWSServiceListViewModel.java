@@ -1,13 +1,11 @@
 package com.example.johann.awsdocs.viewmodels;
 
 import android.app.Application;
-import android.app.Service;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -26,8 +24,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import timber.log.Timber;
@@ -92,6 +88,9 @@ public class AWSServiceListViewModel extends AndroidViewModel {
 
                                     documentationURL = ParsingUtils.appendURL(documentationURL);
 
+                                    if( documentationName.isEmpty()) {
+                                        continue;
+                                    }
                                     awsServiceArrayList.add(new AWSService(documentationName, documentationURL));
                                 }
                             }

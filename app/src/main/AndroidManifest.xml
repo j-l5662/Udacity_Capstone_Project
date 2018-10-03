@@ -50,6 +50,9 @@
         </receiver>
         <service android:name=".widget.AWSWidgetRemoteViewService"
             android:permission="android.permission.BIND_REMOTEVIEWS"></service>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="af2a0296c39a1523936ecb8d5ffd7aaaa1cdc719" />
     </application>
 
 </manifest>

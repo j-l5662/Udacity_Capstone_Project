@@ -13,9 +13,11 @@ import com.example.johann.awsdocs.utils.NetworkUtils;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.util.concurrent.ExecutionException;
@@ -61,33 +63,35 @@ public class AWSDocumentationPageViewModel extends AndroidViewModel {
                     while (true)
                     {
                         try{
-                            //stackoverflow https://stackoverflow.com/questions/1884230/urlconnection-doesnt-follow-redirect
+
                             resourceUrl = new URL(url);
-                            conn        = (HttpURLConnection) resourceUrl.openConnection();
+                            conn = (HttpURLConnection) resourceUrl.openConnection();
 
                             conn.setConnectTimeout(1000);
                             conn.setReadTimeout(1000);
                             conn.setInstanceFollowRedirects(false);
-                            conn.setRequestProperty("User-Agent", "Mozilla/5.0...");
 
                             switch (conn.getResponseCode())
                             {
-                                case HttpURLConnection.HTTP_MOVED_PERM:
                                 case HttpURLConnection.HTTP_MOVED_TEMP:
                                     location = conn.getHeaderField("Location");
                                     location = URLDecoder.decode(location, "UTF-8");
-                                    base     = new URL(url);
-                                    next     = new URL(base, location);
-                                    url      = next.toExternalForm();
+                                    base = new URL(url);
+                                    next = new URL(base, location);
+                                    url = next.toExternalForm();
                                     continue;
                             }
-
                             break;
                         }
-                        catch (Exception e){
-
+                        catch (MalformedURLException e) {
+                            Timber.e(e.getMessage());
                         }
-
+                        catch (UnsupportedEncodingException e) {
+                            Timber.e(e.getMessage());
+                        }
+                        catch (IOException e) {
+                            Timber.e(e.getMessage());
+                        }
                     }
 
                     try {
@@ -121,7 +125,6 @@ public class AWSDocumentationPageViewModel extends AndroidViewModel {
         }
         else {
             Timber.i("Offline");
-//            mAWSHTMLPage.setValue(NetworkUtils.makeDocumentationRequestOffline(androidContext));
 
             AWSDocumentation awsDocumentation = null;
             String queriedDocHTML = "";

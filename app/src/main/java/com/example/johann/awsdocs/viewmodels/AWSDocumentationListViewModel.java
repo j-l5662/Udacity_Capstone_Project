@@ -52,7 +52,6 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
             Timber.i("Online");
             RequestQueue queue = Volley.newRequestQueue(androidContext);
             String url = mAWSService.getServiceURL();
-            Timber.i(url);
 
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
@@ -82,8 +81,6 @@ public class AWSDocumentationListViewModel extends AndroidViewModel {
                                 Element tableSection = tableSections.get(i);
                                 Elements tables = tableSection.getElementsByClass("  ").select("p");
 
-
-                                //TODO Get Link Here
                                 Element htmlPTag = tables.get(1);
 
                                 String linkContent = htmlPTag.select("a").attr("href");

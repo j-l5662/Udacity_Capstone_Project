@@ -2,17 +2,10 @@ package com.example.johann.awsdocs.data;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.ForeignKey;
-import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
-import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
-import android.webkit.WebView;
-
-import java.io.Serializable;
-import java.util.ArrayList;
 
 @Entity(tableName = "services")
 public class AWSService implements Parcelable{

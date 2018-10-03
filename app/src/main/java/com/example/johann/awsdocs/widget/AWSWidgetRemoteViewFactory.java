@@ -13,8 +13,6 @@ import com.example.johann.awsdocs.repository.ServiceRepository;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-import timber.log.Timber;
-
 public class AWSWidgetRemoteViewFactory implements RemoteViewsService.RemoteViewsFactory {
 
     private Context mContext;
@@ -25,7 +23,7 @@ public class AWSWidgetRemoteViewFactory implements RemoteViewsService.RemoteView
 
         mContext = context;
         mServiceRepository = new ServiceRepository(mContext);
-        Log.v("LIST@","2");
+
         returnDatabaseServices();
     }
 
@@ -59,8 +57,11 @@ public class AWSWidgetRemoteViewFactory implements RemoteViewsService.RemoteView
         RemoteViews rv = new RemoteViews(mContext.getPackageName(), R.layout.awswidget_list_view);
         AWSService awsService = mServices.get(position);
         rv.setTextViewText(R.id.widget_adapter_text_view,awsService.getServiceName());
-        Log.v("LIST@","1");
-        Log.v("LIST", awsService.getServiceName());
+
+        Intent activityIntent = new Intent();
+        activityIntent.putExtra(mContext.getString(R.string.main_activity_extra),awsService);
+
+        rv.setOnClickFillInIntent(R.id.widget_adapter_text_view,activityIntent);
 
         return rv;
     }
