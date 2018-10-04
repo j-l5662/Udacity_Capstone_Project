@@ -18,10 +18,10 @@ repositories {
 android {
     signingConfigs {
         config {
-            keyAlias 'udacity'
+            keyAlias 'key'
             keyPassword 'password'
-            storeFile file('$rootDir/keystore1')
-            storePassword 'udacitypassword'
+            storeFile file("$rootDir/keystore")
+            storePassword 'password'
         }
     }
     compileSdkVersion 27

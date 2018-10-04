@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -43,6 +44,9 @@ public class AWSDocumentationActivity extends AppCompatActivity {
     @BindView(R.id.detail_drawer_layout)
     DrawerLayout mDrawerLayout;
 
+    @BindView(R.id.documentation_toolbar)
+    public Toolbar mToolbar;
+
     private ActionBarDrawerToggle mActionBarToggle;
     private AWSDocumentation mAWSDocumentation;
     private LiveData<String> mAWSDetailHTML;
@@ -58,6 +62,8 @@ public class AWSDocumentationActivity extends AppCompatActivity {
 
 
         ButterKnife.bind(this);
+
+        setSupportActionBar(mToolbar);
 
         if(getIntent().hasExtra(getString(R.string.detail_activity_extra))) {
             mAWSDocumentation = getIntent().getParcelableExtra(getString(R.string.detail_activity_extra));

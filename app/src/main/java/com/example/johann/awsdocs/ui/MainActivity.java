@@ -1,5 +1,6 @@
 package com.example.johann.awsdocs.ui;
 
+import android.app.ActivityOptions;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -10,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -39,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
     @BindView(R.id.services_recycler_view)
     public RecyclerView mRecyclerView;
 
+    @BindView(R.id.toolbar)
+    public Toolbar mToolbar;
+
     private RecyclerView.LayoutManager mLayoutManager;
     private MainRecyclerViewAdapter mAdapter;
 
@@ -61,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
             Timber.plant(new NoLoggingTree());
         }
         ButterKnife.bind(this);
+
+        setSupportActionBar(mToolbar);
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         mRecyclerView.setHasFixedSize(true);
@@ -119,8 +126,9 @@ public class MainActivity extends AppCompatActivity implements MainRecyclerViewA
             intent = new Intent(context,destinationActivity);
             intent.putExtra(getString(R.string.main_activity_extra),awsService);
 
+            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
+            startActivity(intent, bundle);
         }
-        startActivity(intent);
     }
 
     private void setupViewModel() {

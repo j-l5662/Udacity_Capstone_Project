@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import com.example.johann.awsdocs.R;
 import com.example.johann.awsdocs.adapters.DetailRecyclerViewAdapter;
@@ -31,6 +32,9 @@ public class AWSDetailActivity extends AppCompatActivity implements DetailRecycl
     @BindView(R.id.aws_service_list_recycler_view)
     RecyclerView mRecyclerView;
 
+    @BindView(R.id.detail_toolbar)
+    public Toolbar mToolbar;
+
     private LiveData<ArrayList<AWSDocumentation>> mAWSDocumentations;
 
     @Override
@@ -40,6 +44,9 @@ public class AWSDetailActivity extends AppCompatActivity implements DetailRecycl
         setContentView(R.layout.aws_activity_detail);
 
         ButterKnife.bind(this);
+
+        setSupportActionBar(mToolbar);
+
         if(getIntent().hasExtra(getString(R.string.main_activity_extra))) {
             mAWSService = getIntent().getParcelableExtra(getString(R.string.main_activity_extra));
         }
@@ -47,8 +54,6 @@ public class AWSDetailActivity extends AppCompatActivity implements DetailRecycl
 
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-
-
 
         setupViewModel();
     }
