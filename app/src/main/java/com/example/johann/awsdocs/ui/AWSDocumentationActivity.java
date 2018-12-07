@@ -163,7 +163,6 @@ public class AWSDocumentationActivity extends AppCompatActivity {
 
             Element selectedLink = link.select("a").get(0);
 
-
             String url = selectedLink.attr("href");
 
             String title = selectedLink.text();

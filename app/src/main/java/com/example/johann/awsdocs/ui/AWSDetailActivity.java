@@ -77,7 +77,6 @@ public class AWSDetailActivity extends AppCompatActivity implements DetailRecycl
 
         AWSDocumentation awsDocumentation = mAWSDocumentations.getValue().get(position);
 
-
         Class documentationActivity = AWSDocumentationActivity.class;
         Intent intent = new Intent(this,documentationActivity);
         intent.putExtra(getString(R.string.detail_activity_extra),awsDocumentation);
